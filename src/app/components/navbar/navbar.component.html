@@ -1,50 +1,22 @@
-<mat-toolbar color="primary">
-    <a
-      [routerLink]="'/'"
-      mat-icon-button
-      class="example-icon"
-      arial-label="Example icon-button with menu icon"
-    >
-     <!-- <img src="assets/transport.png" alt="Transport Truck Logo" style="height: 60px;">  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/transport.png" alt="Logo" style="height: 60px;">
+
     </a>
-    <span class="example-spacer"></span>
-    <a
-      *ngIf = "!isLoggedIn"
-      [routerLink]="'/login'"
-      mat-icon-button
-      class = "example-icon favorite-icon"
-      aria-label = "Example icon-button with heart icon"
-    >
-      Iniciar sesión
-    </a>
-    <a
-      *ngIf = "!isLoggedIn"
-      [routerLink]="'/signup'"
-      mat-icon-button
-      class="example-icon favorite-icon mr20 ml70"
-      aria-label="Example icon-button with heart icon"
-    >
-      Registrar
-    </a>
-    <a
-      *ngIf = "isLoggedIn"
-      (click) = "logout()"
-      style="margin-right: 50px"
-      mat-icon-button
-      class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon"
-    >
-      Cerrar sesión
-    </a>
-    <button
-      *ngIf = "isLoggedIn && user"
-      mat-button
-      style="margin-right: 10px"
-      class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon"
-    >
-      {{ user.username }}
-    </button>
-  </mat-toolbar>
-  
+
+    <div class="d-flex ms-auto align-items-center">
+      <ng-container *ngIf="!isLoggedIn">
+        <a class="btn btn-light me-3" routerLink="/login">Iniciar sesión</a>
+        <a class="btn btn-outline-light me-3" routerLink="/signup">Registrar</a>
+      </ng-container>
+
+      <ng-container *ngIf="isLoggedIn">
+        <button class="btn btn-outline-light me-3" (click)="logout()">Cerrar sesión</button>
+        <button class="btn btn-light me-3" *ngIf="user">{{ user.username }}</button>
+      </ng-container>
+    </div>
+  </div>
+</nav>
+
   
