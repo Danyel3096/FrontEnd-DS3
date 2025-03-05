@@ -3,7 +3,7 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HTTP_INTERCEPTORS
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 
-@Injectable()
+
 export class AuthInterceptor implements HttpInterceptor{
 
   constructor(private loginService:LoginService) {

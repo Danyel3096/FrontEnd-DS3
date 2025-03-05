@@ -1,7 +1,13 @@
 import { LoginService } from './../../services/login.service';
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MaterialModule } from '../../material/material.module';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
+  standalone:true,
+  imports:[CommonModule,MaterialModule,RouterModule],
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']

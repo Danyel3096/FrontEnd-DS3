@@ -2,8 +2,12 @@ import { Router } from '@angular/router';
 import { LoginService } from './../../services/login.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Component, OnInit } from '@angular/core';
+import { MaterialModule } from '../../material/material.module';
+import { FormsModule } from '@angular/forms';
 
 @Component({
+  standalone:true,
+  imports:[MaterialModule,FormsModule],
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']

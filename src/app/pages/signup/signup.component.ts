@@ -2,8 +2,12 @@ import  Swal  from 'sweetalert2';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
+import { MaterialModule } from '../../material/material.module';
+import { FormsModule } from '@angular/forms';
 
 @Component({
+  standalone:true,
+  imports:[MaterialModule,FormsModule],
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
