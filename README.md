@@ -1,6 +1,6 @@
 # Repositorio destinado para el FrontEnd de Desarrollo de Software 3
 FrontEnd del proyecto para la asignatura Desarrollo de Software III
-
+# Repositorio en Slack 
 ## 1. Introducción  
 Este documento describe la arquitectura inicial del sistema de gestión de órdenes y entregas, incluyendo pero no limitado a:
 * Requisitos funcionales
