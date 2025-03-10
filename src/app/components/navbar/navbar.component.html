@@ -7,6 +7,7 @@
 
     <div class="d-flex ms-auto align-items-center">
       <ng-container *ngIf="!isLoggedIn">
+        <a class="btn btn-light me-3" routerLink="/products">Products</a>
         <a class="btn btn-light me-3" routerLink="/login">Iniciar sesión</a>
         <a class="btn btn-outline-light me-3" routerLink="/signup">Registrar</a>
       </ng-container>
@@ -15,6 +16,8 @@
         <button class="btn btn-outline-light me-3" (click)="logout()">Cerrar sesión</button>
         <button class="btn btn-light me-3" *ngIf="user">{{ user.username }}</button>
       </ng-container>
+
+      
     </div>
   </div>
 </nav>
