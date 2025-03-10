@@ -1,8 +1,9 @@
 import { LoginService } from './../../services/login.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../material/material.module';
 import { RouterModule } from '@angular/router';
+import { CartStateService } from '../../pages/products/shared/data-access/cart-state.service';
 
 
 @Component({
@@ -35,6 +36,8 @@ export class NavbarComponent implements OnInit {
     this.login.logout();
     window.location.reload();
   }
+
+  cartState = inject(CartStateService).state;
 
 }
 
