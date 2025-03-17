@@ -15,7 +15,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
   { path: 'products', component: ProductsListComponent, pathMatch: 'full' },
   { path: 'cart', component: CartListComponent, pathMatch: 'full' },
-  { path: 'admin', component: DashboardComponent, pathMatch: 'full', canActivate: [AdminGuard] },
+  { path: 'admin-dashboard', component: DashboardComponent, pathMatch: 'full', canActivate: [AdminGuard] },
   { path: 'user-dashboard', component: UserDashboardComponent, pathMatch: 'full', canActivate: [NormalGuard] }
 ];
 

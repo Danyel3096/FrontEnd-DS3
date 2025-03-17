@@ -1,0 +1,25 @@
+<p>sidebar works!</p>
+
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar">
+    <a routerLink="/admin-dashboard" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <span class="fs-4 pt-5">Admin/user Panel</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a routerLink="/admin-dashboard" class="nav-link active">Dashboard</a>
+      </li>
+      <li>
+        <a routerLink="/products" class="nav-link text-dark">Productos</a>
+      </li>
+      <li>
+        <a routerLink="/orders" class="nav-link text-dark">Órdenes</a>
+      </li>
+      <li>
+        <a routerLink="/settings" class="nav-link text-dark">Configuraciones</a>
+      </li>
+    </ul>
+    <hr>
+    <a routerLink="/logout" class="nav-link text-dark">Cerrar sesión</a>
+</div>
+  

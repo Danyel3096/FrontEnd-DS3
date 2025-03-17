@@ -19,8 +19,8 @@ export class AdminGuard implements CanActivate {
       return true;
     }
 
-    this.router.navigate(['login']);
-    return false;
+    //this.router.navigate(['login']);
+    return true; // PENDING: change to false after implementing the login service
   }
 
 }
