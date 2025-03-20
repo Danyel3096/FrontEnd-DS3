@@ -16,6 +16,9 @@ export const routes: Routes = [
   { path: 'products', component: ProductsListComponent, pathMatch: 'full' },
   { path: 'cart', component: CartListComponent, pathMatch: 'full' },
   { path: 'admin-dashboard', component: DashboardComponent, pathMatch: 'full', canActivate: [AdminGuard] },
-  { path: 'user-dashboard', component: UserDashboardComponent, pathMatch: 'full', canActivate: [NormalGuard] }
+  //{ path: 'admin-dashboard-product', component: DashboardComponentProduct, pathMatch: 'full', canActivate: [AdminGuard] },
+  //{ path: 'admin-dashboard-user', component: DashboardComponentUser, pathMatch: 'full', canActivate: [AdminGuard] },
+  { path: 'user-dashboard', component: UserDashboardComponent, pathMatch: 'full', canActivate: [NormalGuard] },
+  //{ path: 'user-dashboard-order', component: UserDashboardComponentOrder, pathMatch: 'full', canActivate: [NormalGuard] }
 ];
 
