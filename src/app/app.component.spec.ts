@@ -6,7 +6,8 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        AppComponent
       ],
       declarations: [
         AppComponent
@@ -20,16 +21,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sistema-Ordenes'`, () => {
+  it(`should have the 'frontend' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('sistema-Ordenes');
+    expect(app.title).toEqual('frontend');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('sistema-Ordenes app is running!');
+    expect(compiled.querySelector('.content h1')?.textContent).toContain('Hello, frontend is running!');
   });
 });

@@ -5,12 +5,17 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import ProductsListComponent from './pages/products/features/product-list/product-list.component';
 import CartListComponent from './pages/products/cart/cart.component';
+
+// paginas de la aplicacion
+import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
-import { HomeComponent } from './pages/home/home.component';
+import { MissingComponent } from './pages/missing/missing.component';
+import { UnauthorizedComponent } from './pages/unauthorized/unauthorized.component';
 
+// rutas de la aplicacion
 export const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: '', component: HomeComponent, pathMatch: 'full' }, // ruta por defecto
   { path: 'signup', component: SignupComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
   { path: 'products', component: ProductsListComponent, pathMatch: 'full' },
@@ -20,5 +25,6 @@ export const routes: Routes = [
   //{ path: 'admin-dashboard-user', component: DashboardComponentUser, pathMatch: 'full', canActivate: [AdminGuard] },
   { path: 'user-dashboard', component: UserDashboardComponent, pathMatch: 'full', canActivate: [NormalGuard] },
   //{ path: 'user-dashboard-order', component: UserDashboardComponentOrder, pathMatch: 'full', canActivate: [NormalGuard] }
+  { path: 'unauthorized', component: UnauthorizedComponent }, // ruta no autorizada
+  { path: '**', component: MissingComponent }, // ruta no encontrada
 ];
-

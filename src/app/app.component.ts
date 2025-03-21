@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
+
 export class AppComponent {
-  title = 'sistema-ordenes-frontend';
+  title = 'frontend';
 }
