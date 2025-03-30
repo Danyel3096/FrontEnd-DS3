@@ -9,3 +9,17 @@
   .navbar {
     z-index: 1000;
   }
+
+  .custom-background.active {
+    background-color: #54a2f0; 
+    border-radius: 5px;
+    padding: 6px 11px;
+  }
+  .navbar {
+    font-size: 1.1rem;
+  }
+  
+  .nav-link {
+    margin: 4 5.5rem; 
+  }
+  
